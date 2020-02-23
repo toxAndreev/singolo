@@ -1,0 +1,132 @@
+html {
+  width: 1024px;
+  font-family: 'Lato';
+  user-select: none;
+}
+
+body {
+  margin: 0 4px 0 0;	
+}
+
+header {
+  background-color: #2d303a; 
+  width: 100%;
+  height: 88px;
+  border-bottom: 6px solid #323746;  
+} 
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  
+   
+}
+
+.logo-container {
+  position: relative;
+  left: 40px;
+  top: -1px;	
+  display: flex;
+  flex: 4;
+  justify-content: start;  
+  align-items: center;
+}
+
+.nav-container {
+  position: relative;
+  top: 4px;
+  right: 8px;	
+  display: flex;
+  flex: 3;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 13.7px;
+  letter-spacing: 0.5px;
+}
+
+.nav-container h5{
+  margin: 0 15px;	
+}
+
+.nav-container h5:hover {
+  color: #e36861;
+  cursor: pointer;
+}
+
+.slider-container {
+  background-color: #f06c64;
+  width: 100%;
+  height: 594px;
+  border-bottom: 6px solid #ea676b;
+}
+
+.our-services-container {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 494px; 
+  color: #666d89;  
+}
+
+.our-services-tittle-container{
+  padding: 35px 40px 0 40px;	
+}
+
+.our-services-tittle-container h1 {
+  font-family: lato-Black;	
+  font-size: 30px;
+}
+
+.our-services-container p {
+  position: relative;
+  bottom: 7px;
+  font-family: lato-medium;
+  font-size: 17px;
+  letter-spacing: 0.25px;
+  line-height: 30px;
+  color: #878da9;	
+}
+
+.our-services-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4px 0 0 20px;
+}
+
+.our-services-grid-container h2 {
+  font-family: lato-black;
+  font-size: 18px;
+}
+
+.cell-box {
+  display: flex;
+  justify-content: center;
+  width: 307px;	
+}
+
+.cell-box img {
+  position: relative;
+  top: 20px;
+  right: 19px;
+  border: 2px solid #666d89;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.os-info-grid p {
+  font-size: 12px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #767e9e;
+  text-align: justify;
+  overflow: hidden;
+  padding-right: 19px;
+}
