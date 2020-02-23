@@ -1,0 +1,29 @@
+@font-face {
+  font-family: lato; 
+  src: url(assets/lato/Lato-Thin.ttf); 
+}
+
+@font-face {
+  font-family: lato-bold; 
+  src: url(assets/lato/Lato-Bold.ttf); 
+}
+
+@font-face {
+  font-family: lato-medium; 
+  src: url(assets/lato/Lato-Medium.ttf); 
+}
+
+@font-face {
+  font-family: lato-Black; 
+  src: url(assets/lato/Lato-Black.ttf); 
+}
+
+@font-face {
+  font-family: lato-regular; 
+  src: url(assets/lato/Lato-Regular.ttf); 
+}
+
+@font-face {
+  font-family: lato-light; 
+  src: url(assets/lato/Lato-Light.ttf); 
+}
