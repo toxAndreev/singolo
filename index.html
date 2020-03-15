@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>SINGOLO</title>
+	<script src="script.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -15,24 +16,65 @@
    
 </div>
 <nav class="header-nav">
-   <ul class="header-nav-list">
-   <li><a href="#">Home</a></li>
-   <li><a href="#Services">Services</a></li>
-   <li><a href="#Portfolio">Portfolio</a></li>
-   <li><a href="#aboutUs">About</a></li>
-   <li><a href="#contact">Contact</a></li>
+   <ul class="header-nav-list" id="header-nav-list">
+   <li><a href="#" onclick="changeNavColor(this)">Home</a></li>
+   <li><a href="#Services" onclick="changeNavColor(this)">Services</a></li>
+   <li><a href="#Portfolio" onclick="changeNavColor(this)">Portfolio</a></li>
+   <li><a href="#aboutUs" onclick="changeNavColor(this)">About</a></li>
+   <li><a href="#contact" onclick="changeNavColor(this)">Contact</a></li>
 </ul>
 </nav>
 </header>
 <main>
    <section class="slider">
-      <button class="leftArrow"></button>
+      <button class="leftArrow" onclick="SlideIMG()"></button>
       <section class="phones">
-         <section class="verticalPhone"></section>
-         <section class="horizontalPhone"></section>
+         <section class="verticalPhone" id="verticalPhone">
+		 <button onclick="blackscreen1()" style="
+           width: 50px;
+           height: 50px;
+           border-radius: 50px;
+           position: relative;
+           top: 406px;
+           left: 85px;
+	       border: 0;
+           background: transparent;">
+	     </button>
+	     <div id="bcks1" style="
+	       display: none;
+           position: relative;
+           top: 13px;
+           left: 16px;
+           background: black;
+           width: 189px;
+           height: 335px;">
+	     </div>
+		 </section>
+         <section class="horizontalPhone" id="horizontalPhone">
+		 <button onclick="blackscreen2()" style="
+           width: 50px;
+           height: 50px;
+           border-radius: 50px;
+           position: relative;
+           top: 82px;
+           left: 5px;
+	       border: 0;
+           background: transparent;">
+	     </button>
+	     <div id="bcks2" style="
+	       display: none;
+           position: relative;
+           bottom: 39px;
+           left: 60px;
+           background: black;
+           width: 335px;
+           height: 189px;">
+	     </div>
+		 </section>
       </section>
-      <button class="rightArrow"></button>
-
+      <button class="rightArrow" onclick="SlideIMG()"></button>
+     
+	 
    </section>
    <section class="Services" id="Services">
       
@@ -94,27 +136,27 @@
 <section class="Portfolio" id="Portfolio">
     <section class="container">
         <h1>Portfolio</h1>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, 
+		<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, 
             eget lacinia odio sem nec elit.</p>
         <section class="buttonsSort">
-        <button>All</button>
-        <button>Web Design</button>
-        <button>Graphic Design</button>
-        <button>Artwork</button>
+        <button onclick="portfolioImages()">All</button>
+        <button onclick="portfolioImages()">Web Design</button>
+        <button onclick="portfolioImages()">Graphic Design</button>
+        <button onclick="portfolioImages()">Artwork</button>
         </section>
-            <section class="portfolioPics">
-                <div class="divPic"><img class="Pic1" src="./assets/img/Pic 1.png" alt="Pic 1" ></div>
-                <div class="divPic"><img class="Pic2" src="./assets/img/Pic 2.png" alt="Pic 2" ></div>
-                <div class="divPic"><img class="Pic3" src="./assets/img/Pic 3.png" alt="Pic 3" ></div>
-                <div class="divPic"><img class="Pic4"src="./assets/img/Pic 4.png" alt="Pic 4" ></div>
-                <div class="divPic"><img class="Pic5"src="./assets/img/Pic 5.png" alt="Pic 5"></div>
-                <div class="divPic"><img class="Pic6" src="./assets/img/Pic 6.png" alt="Pic 6" ></div>
-                <div class="divPic"><img class="Pic7" src="./assets/img/Pic 7.png" alt="Pic 7" ></div>
-                <div class="divPic"><img class="Pic8" src="./assets/img/Pic 8.png" alt="Pic 8"></div>
-                <div class="divPic"><img class="Pic9" src="./assets/img/Pic 9.png" alt="Pic 9"></div>
-                <div class="divPic"><img class="Pic10" src="./assets/img/Pic 10.png" alt="Pic 10" ></div>
-                <div class="divPic"><img class="Pic11" src="./assets/img/Pic 11.png" alt="Pic 11" ></div>
-                <div class="divPic"><img class="Pic12" src="./assets/img/Pic 12.png" alt="Pic 12"></div>
+            <section class="portfolioPics" id="p-img">
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic1" src="./assets/img/Pic 1.png" alt="Pic 1" ></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic2" src="./assets/img/Pic 2.png" alt="Pic 2" ></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic3" src="./assets/img/Pic 3.png" alt="Pic 3" ></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic4" src="./assets/img/Pic 4.png" alt="Pic 4" ></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic5" src="./assets/img/Pic 5.png" alt="Pic 5"></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic6" src="./assets/img/Pic 6.png" alt="Pic 6" ></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic7" src="./assets/img/Pic 7.png" alt="Pic 7" ></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic8" src="./assets/img/Pic 8.png" alt="Pic 8"></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic9" src="./assets/img/Pic 9.png" alt="Pic 9"></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic10" src="./assets/img/Pic 10.png" alt="Pic 10" ></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic11" src="./assets/img/Pic 11.png" alt="Pic 11" ></div>
+                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic12" src="./assets/img/Pic 12.png" alt="Pic 12"></div>
             </section>
     </section>
 </section>
@@ -176,13 +218,13 @@
         <h1>Get a Quote</h1>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
         porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>      
-        <section class="getQuoteContent">
+        <section class="getQuoteContent" id="getQuoteContent">
             <form class="getQuoteInputs">    
                 <input type="text" id="name" name="name" required placeholder="Name(Required)"size="70">
                 <input type="email" id="email" name="email" required placeholder="Email(Required)"size="70">
                 <input type="text" id="subject" name="subject" placeholder="Subject"size="70">
                 <textarea id="message" name="message"  placeholder="Describe your project in detail..."rows="10" cols="70"></textarea>
-                <button type="submit">Submit</button>
+                <button type="submit" onclick="Submit()">Submit</button>
             </form>
             <section class="contactInfo">
                 <h2>Contact Information</h2>
