@@ -30,7 +30,7 @@ function SlideIMG(){
 	  y.style.background = "url(assets/img/iPhone_Horizontal.png) no-repeat";
 	  }
 	function sliderimg1() {	
-		x.style.background = "url(assets/layer8.png)";
+		x.style.background = "url(assets/s-phone.png) no-repeat";
 	    x.style.margin = "50px 0 0 380px";
 	    y.style.background = "none";
 		document.getElementById("bcks1").style.display = "none";
