@@ -54,12 +54,16 @@ function portfolioImages() {
 	var x = document.getElementById("p-img");
 	var y = x.getElementsByTagName("img");
 	var i;
+	var arr = [1,2,3,4,5,6,7,8,9,10,11,12];
+	shuffle(arr);
 	for(i = 0; i < y.length; i++){
-		y[i].src = "./assets/img/Pic " + Math.floor((Math.random() * 12) + 1) + ".png";
+		y[i].src = "./assets/img/Pic " + arr[i] + ".png";
 		y[i].style.margin = "0";
 	}
 	
-	
+	function shuffle(array) {
+		array.sort(() => Math.random() - 0.5);
+	}
 }
 
 function ImgBorder(id) {
