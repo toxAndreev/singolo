@@ -1,4 +1,26 @@
+
 //Header
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+	cncWhite();
+    document.getElementById("nav-services").style.color = "#f06c64";
+  }
+	if (document.body.scrollTop > 1084 || document.documentElement.scrollTop > 1084) {
+	cncWhite();
+    document.getElementById("nav-portfolio").style.color = "#f06c64";
+  }
+	if (document.body.scrollTop > 1954 || document.documentElement.scrollTop > 1954) {
+	cncWhite();
+    document.getElementById("nav-about").style.color = "#f06c64";
+  }
+	if (document.body.scrollTop > 2300 || document.documentElement.scrollTop > 2300) {
+	cncWhite();
+    document.getElementById("nav-contact").style.color = "#f06c64";
+  }
+}
 
 function changeNavColor(id) {
 	cncWhite();
@@ -15,6 +37,8 @@ function cncWhite() {
 }
 
 //Slider
+
+
 
 function SlideIMG(){
 	var x = document.getElementById("verticalPhone");
@@ -84,9 +108,11 @@ function ImgBorder(id) {
 //Get a quote
 
 function Submit(){
+
 	var subject = document.getElementById("subject");
 	var describe = document.getElementById("message");
 	var x = (!subject.value) ? "Без темы" : ("Тема: " + subject.value);
 	var y = (!describe.value) ? "Без описания" : ("Описание: " + describe.value);
 	alert("Письмо отправлено\n" + x + "\n" + y);
 }
+
