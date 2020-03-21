@@ -17,11 +17,11 @@
 </div>
 <nav class="header-nav">
    <ul class="header-nav-list" id="header-nav-list">
-   <li><a href="#" onclick="changeNavColor(this)">Home</a></li>
-   <li><a href="#Services" onclick="changeNavColor(this)">Services</a></li>
-   <li><a href="#Portfolio" onclick="changeNavColor(this)">Portfolio</a></li>
-   <li><a href="#aboutUs" onclick="changeNavColor(this)">About</a></li>
-   <li><a href="#contact" onclick="changeNavColor(this)">Contact</a></li>
+   <li><a href="#" onclick="changeNavColor(this)" id = "nav-home" class="active">Home</a></li>
+   <li><a href="#Services" onclick="changeNavColor(this)" id = "nav-services">Services</a></li>
+   <li><a href="#Portfolio" onclick="changeNavColor(this)" id = "nav-portfolio">Portfolio</a></li>
+   <li><a href="#aboutUs" onclick="changeNavColor(this)" id = "nav-about">About</a></li>
+   <li><a href="#contact" onclick="changeNavColor(this)" id = "nav-contact">Contact</a></li>
 </ul>
 </nav>
 </header>
@@ -220,8 +220,8 @@
         porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>      
         <section class="getQuoteContent" id="getQuoteContent">
             <form class="getQuoteInputs">    
-                <input type="text" id="name" name="name" required placeholder="Name(Required)"size="70">
-                <input type="email" id="email" name="email" required placeholder="Email(Required)"size="70">
+                <input type="text" id="name" name="name" placeholder="Name(Required)"size="70">
+                <input type="email" id="email" name="email" placeholder="Email(Required)"size="70">
                 <input type="text" id="subject" name="subject" placeholder="Subject"size="70">
                 <textarea id="message" name="message"  placeholder="Describe your project in detail..."rows="10" cols="70"></textarea>
                 <button type="submit" onclick="Submit()">Submit</button>
