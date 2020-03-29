@@ -1,118 +1,177 @@
+const LINKS = document.querySelectorAll('.header-nav-list a');
+for (let element of LINKS) {
+    element.addEventListener('click',()=>{
+        event.preventDefault();
+        document.querySelector(element.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+};
+const MENU=document.getElementById('nav-menu');
+const MOBILE=document.getElementById('nav-menu-mobile');
 
-//Header
+removeLinks(MENU);
+removeLinks(MOBILE);
+function removeLinks(linkByID){
+    linkByID.addEventListener('click',(event)=>{
+        if(event.target.getAttribute('href')!=null){
+            linkByID.querySelectorAll('a').forEach(element=>element.classList.remove('active'));
+        event.target.classList.add('active');}
+        
+    });
+}
+document.addEventListener('scroll',()=>{
+  
+    MENU.querySelectorAll('a').forEach(element=>element.classList.remove('active'));
+    let windowScroll=document.body.scrollTop||document.documentElement.scrollTop;
+    if(windowScroll<400){
+    document.getElementById('nav-home').classList.add('active');}
+    else if(windowScroll<900){
+        document.getElementById('nav-services').classList.add('active');}
+        else if(windowScroll<1500){
+            document.getElementById('nav-portfolio').classList.add('active');}
+                else if(windowScroll<2100){
+                    document.getElementById('nav-about').classList.add('active');}
+                    else
+                    document.getElementById('nav-contact').classList.add('active');
+});
 
-window.onscroll = function() {myFunction()};
+document.addEventListener('scroll',()=>{
+  
+    MOBILE.querySelectorAll('a').forEach(element=>element.classList.remove('active'));
+    let windowScroll=document.body.scrollTop||document.documentElement.scrollTop;
+    if(windowScroll<320){
+    document.getElementById('nav-home-mobile').classList.add('active');}
+    else if(windowScroll<900){
+        document.getElementById('nav-services-mobile').classList.add('active');}
+        else if(windowScroll<1500){
+            document.getElementById('nav-portfolio-mobile').classList.add('active');}
+                else if(windowScroll<2300){
+                    document.getElementById('nav-about-mobile').classList.add('active');}
+                    else
+                    document.getElementById('nav-contact-mobile').classList.add('active');
+});
 
-function myFunction() {
-  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-	cncWhite();
-    document.getElementById("nav-services").style.color = "#f06c64";
-  }
-	if (document.body.scrollTop > 1084 || document.documentElement.scrollTop > 1084) {
-	cncWhite();
-    document.getElementById("nav-portfolio").style.color = "#f06c64";
-  }
-	if (document.body.scrollTop > 1954 || document.documentElement.scrollTop > 1954) {
-	cncWhite();
-    document.getElementById("nav-about").style.color = "#f06c64";
-  }
-	if (document.body.scrollTop > 2300 || document.documentElement.scrollTop > 2300) {
-	cncWhite();
-    document.getElementById("nav-contact").style.color = "#f06c64";
-  }
+
+
+let items = document.querySelectorAll('.slider .slide');
+let currentItem = 0;
+
+
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
 }
 
-function changeNavColor(id) {
-	cncWhite();
-	id.style.color = "#f06c64";
+function hideItem(direction) {
+
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('activeSlide', direction);
+	});
 }
 
-function cncWhite() {
-	var x = document.getElementById("header-nav-list");
-	var y = x.getElementsByTagName("a");
-	var i;
-	for(i = 0; i < y.length; i++){
-		y[i].style.color = "white";
-	}
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('activeSlide');
+		
+	});
 }
 
-//Slider
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
 
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
 
-
-function SlideIMG(){
-	var x = document.getElementById("verticalPhone");
-	var y = document.getElementById("horizontalPhone");
+document.querySelector('.leftArrow').addEventListener('click', function() {
+	previousItem(currentItem);
 	
-	if(y.style.background == "none") sliderimg2();
-		else
-			sliderimg1();
-		
-	function sliderimg2() { 
-	  x.style.background = "url(assets/img/iPhone_Vertical.png) no-repeat";
-	  x.style.margin = "51px 0 0 110px";
-	  y.style.background = "url(assets/img/iPhone_Horizontal.png) no-repeat";
-	  }
-	function sliderimg1() {	
-		x.style.background = "url(assets/s-phone.png) no-repeat";
-	    x.style.margin = "50px 0 0 380px";
-	    y.style.background = "none";
-		document.getElementById("bcks1").style.display = "none";
-		document.getElementById("bcks2").style.display = "none";
-	}
+});
+
+document.querySelector('.rightArrow').addEventListener('click', function() {
+		nextItem(currentItem);
+
+});
+
+
+document.querySelector('.buttonVertical').onclick=function(){
+    let bgcolor=document.querySelector('.blackScreenVertical').style.background;
+    if(bgcolor=="transparent"||bgcolor=="")
+    document.querySelector('.blackScreenVertical').style.background="black";
+    else
+    document.querySelector('.blackScreenVertical').style.background="transparent";
+};
+
+document.querySelector('.buttonHorizontal').onclick=function(){
+    let bgcolor=document.querySelector('.blackScreenHorizontal').style.background;
+    if(bgcolor=="transparent"||bgcolor=="")
+    document.querySelector('.blackScreenHorizontal').style.background="black";
+    else
+    document.querySelector('.blackScreenHorizontal').style.background="transparent";
+};
+/**
+ PORTFOLIO functionality
+ */
+
+const TABS=document.getElementById('portfolioTabs');
+TABS.addEventListener('click',(event)=>{
+    TABS.querySelectorAll('button').forEach(element=>element.classList.remove('activeTab'));
+    event.target.classList.add('activeTab');
+});
+
+function shuffle(a, b) {
+    return Math.random()- 0.5;
 }
-		
-function blackscreen1(){
-	var x = document.getElementById("bcks1");
-	x.style.display = (x.style.display == "none") ? "block" : "none";
+document.querySelector('.buttonsSort').onclick=function(){
+    let node=document.querySelectorAll('.divPic');
+    let node_array = Array.prototype.slice.call(node);
+   // node_array.sort((shuffle));
+    //node_array.reverse();
+   let randomOffset=Math.round(Math.random()*15);
+    randomOffset%12===0?randomOffset--:randomOffset;
+  for(let i=0;i<randomOffset;i++)
+   node_array.unshift(node_array.pop());
+  
+    let el = document.getElementById("portfolioPics");
+    while (el.firstChild) {
+    el.removeChild(el.firstChild);
+    }
+    document.getElementById('portfolioPics').append(...node_array);
+
+};
+const PIC=document.getElementById('portfolioPics');
+PIC.addEventListener('click',(event)=>{
+   
+    if(event.target.getAttribute('src')!=null){
+    PIC.querySelectorAll('div').forEach(element=>element.classList.remove('activePic'));
+    PIC.querySelectorAll('section').forEach(element=>element.classList.remove('activePic'));
+    event.target.parentNode.classList.add('activePic');
+    //Костыль
+//    document.getElementById('containerPortfolio').classList.remove('activePic');
 }
+});
+const BUTTON=document.getElementById('submit-btn');
+const CLOSE_BUTTON=document.getElementById('close-btn');
 
-function blackscreen2(){
-	var x = document.getElementById("bcks2");
-	x.style.display = (x.style.display == "none") ? "block" : "none";
-}
-
-//Portfolio
-
-function portfolioImages() {
-	var x = document.getElementById("p-img");
-	var y = x.getElementsByTagName("img");
-	var i;
-	var arr = [1,2,3,4,5,6,7,8,9,10,11,12];
-	shuffle(arr);
-	for(i = 0; i < y.length; i++){
-		y[i].src = "./assets/img/Pic " + arr[i] + ".png";
-		y[i].style.margin = "0";
-	}
-	
-	function shuffle(array) {
-		array.sort(() => Math.random() - 0.5);
-	}
-}
-
-function ImgBorder(id) {
-		ImgBorderNone();
-		id.style.border = "5px solid #F06C64";
-		
-		
-		function ImgBorderNone() {
-			var x = document.getElementById("p-img");
-			var b = x.getElementsByTagName("div");
-			var j;
-			for(j = 0; j < b.length; j++){
-				b[j].style.border = "none";
-				}
-		}
-}
-
-//Get a quote
-
-function Submit(){
-
-	var subject = document.getElementById("subject");
-	var describe = document.getElementById("message");
-	var x = (!subject.value) ? "Без темы" : ("Тема: " + subject.value);
-	var y = (!describe.value) ? "Без описания" : ("Описание: " + describe.value);
-	alert("Письмо отправлено\n" + x + "\n" + y);
-}
-
+BUTTON.addEventListener('click',(event)=>{
+   const subject=document.getElementById('subject').value.toString();
+   const description=document.getElementById('message').value.toString();
+   subject!=''?document.getElementById('subject-result').innerText="Subject: "+subject:document.getElementById('subject-result').innerText="No subject ";
+   description!=''?document.getElementById('description-result').innerText="Description: "+description:document.getElementById('description-result').innerText="No description ";
+   document.getElementById('message-block').classList.remove('hidden');
+   event.preventDefault(); 
+});
+CLOSE_BUTTON.addEventListener('click',()=>{
+    document.getElementById('subject-result').innerText='';
+    document.getElementById('description-result').innerText='';
+    document.getElementById('form').reset();
+    document.getElementById('message-block').classList.add('hidden');
+});
