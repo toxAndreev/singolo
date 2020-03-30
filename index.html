@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,75 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>SINGOLO</title>
-	<script src="script.js"></script>
 </head>
 <body>
 <div class="wrapper">
 <header>
-<div class="logo">
-   <h1>SINGOLO</h1>
-   
-</div>
-<nav class="header-nav">
-   <ul class="header-nav-list" id="header-nav-list">
-   <li><a href="#" onclick="changeNavColor(this)">Home</a></li>
-   <li><a href="#Services" onclick="changeNavColor(this)">Services</a></li>
-   <li><a href="#Portfolio" onclick="changeNavColor(this)">Portfolio</a></li>
-   <li><a href="#aboutUs" onclick="changeNavColor(this)">About</a></li>
-   <li><a href="#contact" onclick="changeNavColor(this)">Contact</a></li>
-</ul>
-</nav>
+    <div class="headerContainer">            
+        <div class="hamburger">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <div></div>
+            </label>
+            <nav class="header-nav">
+                <div class="logo">
+                    <h1>SINGOLO</h1>
+                    
+                    </div>
+                <ul class="header-nav-list" id="nav-menu-mobile">
+                <li><a id="nav-home-mobile" class="active" href="#fixed">Home</a></li>
+                <li><a id="nav-services-mobile" href="#Services">Services</a></li>
+                <li><a id="nav-portfolio-mobile" href="#Portfolio">Portfolio</a></li>
+                <li><a id="nav-about-mobile" href="#aboutUs">About</a></li>
+                <li><a id="nav-contact-mobile" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+          </div>
+        <div class="logo">
+        <h1>SINGOLO</h1>
+        
+        </div>
+        <nav class="header-nav">
+        <ul class="header-nav-list" id="nav-menu">
+        <li><a id="nav-home" class="active" href="#fixed">Home</a></li>
+        <li><a id="nav-services" href="#Services">Services</a></li>
+        <li><a id="nav-portfolio" href="#Portfolio">Portfolio</a></li>
+        <li><a id="nav-about" href="#aboutUs">About</a></li>
+        <li><a id="nav-contact" href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+    </div>
 </header>
 <main>
-   <section class="slider">
-      <button class="leftArrow" onclick="SlideIMG()"></button>
-      <section class="phones">
-         <section class="verticalPhone" id="verticalPhone">
-		 <button onclick="blackscreen1()" style="
-           width: 50px;
-           height: 50px;
-           border-radius: 50px;
-           position: relative;
-           top: 406px;
-           left: 85px;
-	       border: 0;
-           background: transparent;">
-	     </button>
-	     <div id="bcks1" style="
-	       display: none;
-           position: relative;
-           top: 13px;
-           left: 16px;
-           background: black;
-           width: 189px;
-           height: 335px;">
-	     </div>
-		 </section>
-         <section class="horizontalPhone" id="horizontalPhone">
-		 <button onclick="blackscreen2()" style="
-           width: 50px;
-           height: 50px;
-           border-radius: 50px;
-           position: relative;
-           top: 82px;
-           left: 5px;
-	       border: 0;
-           background: transparent;">
-	     </button>
-	     <div id="bcks2" style="
-	       display: none;
-           position: relative;
-           bottom: 39px;
-           left: 60px;
-           background: black;
-           width: 335px;
-           height: 189px;">
-	     </div>
-		 </section>
-      </section>
-      <button class="rightArrow" onclick="SlideIMG()"></button>
-     
-	 
+    <div class="fixed" id="fixed"></div>
+   <section class="slider" id="slider">
+       <div class="arrows">
+            <div class="leftArrowContainer">
+                <button class="leftArrow"></button>
+            </div>
+            <div class="rightArrowContainer">
+                <button class="rightArrow"></button>
+            </div>
+        </div>
+      <section class="sliderContainer">
+        <section class="phones slide activeSlide">
+            <section class="verticalPhone">
+            <div class="blackScreenVertical"></div>
+            <button class="buttonVertical"></button>   
+            </section>
+            <section class="horizontalPhone">
+                <button class="buttonHorizontal"></button> 
+                <div class="blackScreenHorizontal"></div>
+              
+            </section>
+        </section>
+      
+      <section class="secondSlide slide" id="slide"></section>
+    </section>
+      
+
    </section>
    <section class="Services" id="Services">
       
@@ -88,13 +86,16 @@
       
   
             <article class="containerServices">
-                  <div class="CustomDesignLogo"></div>
+                <div class="servCell">  
+                <div class="CustomDesignLogo"></div>
                   <section class="CustomDesign">
                      <h2>Custom Design</h2>
                                  <p>Curabitur vestibulum eget mauris quis laoreet.
                                      Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
 
                   </section>
+                </div>
+                <div class="servCell">
                   <div class="IdeasLogo"></div>
                   <section class="Ideas">
                      <h2>Inovative Ideas</h2>
@@ -102,6 +103,8 @@
                             nec rutrum tellus dolor id lorem.</p>
                     
                   </section>
+                </div>
+                  <div class="servCell">
                   <div class="LoveIsLogo"></div>
                   <section class="LoveIs">
                      <h2>Love Is The Answer</h2>
@@ -109,6 +112,8 @@
                         et consequat felis. Quisque condimentum.</p>
                  
                   </section>
+                </div>
+                  <div class="servCell">
                   <div class="ResponsiveLogo"></div>
                   <section class="Responsive">
                      <h2>Responsive Layout</h2>
@@ -116,6 +121,8 @@
                             Prae-sent elit leo.</p>
                    
                   </section>
+                </div>
+                  <div class="servCell">
                   <div class="SupportLogo"></div>
                   <section class="Support">
                      <h2>24 / 7 Support</h2>
@@ -123,6 +130,8 @@
                            Pellen- tesque egestas venenatis lorem .</p>
                    
                   </section>
+                </div>
+                  <div class="servCell">
                   <div class="LikeAStarLogo"></div>
                   <section class="LikeAStar">
                      <h2>Feel Like A Star</h2>
@@ -130,33 +139,34 @@
                             Fusce vitae aliquam tellus.</p>
                    
                   </section>
+                  </div>
             </article> 
       </section>
 </section>
 <section class="Portfolio" id="Portfolio">
-    <section class="container">
+    <section class="container" id="containerPortfolio">
         <h1>Portfolio</h1>
-		<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, 
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, 
             eget lacinia odio sem nec elit.</p>
-        <section class="buttonsSort">
-        <button onclick="portfolioImages()">All</button>
-        <button onclick="portfolioImages()">Web Design</button>
-        <button onclick="portfolioImages()">Graphic Design</button>
-        <button onclick="portfolioImages()">Artwork</button>
+        <section class="buttonsSort" id="portfolioTabs">
+        <button>All</button>
+        <button>Web Design</button>
+        <button>Graphic Design</button>
+        <button>Artwork</button>
         </section>
-            <section class="portfolioPics" id="p-img">
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic1" src="./assets/img/Pic 1.png" alt="Pic 1" ></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic2" src="./assets/img/Pic 2.png" alt="Pic 2" ></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic3" src="./assets/img/Pic 3.png" alt="Pic 3" ></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic4" src="./assets/img/Pic 4.png" alt="Pic 4" ></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic5" src="./assets/img/Pic 5.png" alt="Pic 5"></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic6" src="./assets/img/Pic 6.png" alt="Pic 6" ></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic7" src="./assets/img/Pic 7.png" alt="Pic 7" ></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic8" src="./assets/img/Pic 8.png" alt="Pic 8"></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic9" src="./assets/img/Pic 9.png" alt="Pic 9"></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic10" src="./assets/img/Pic 10.png" alt="Pic 10" ></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic11" src="./assets/img/Pic 11.png" alt="Pic 11" ></div>
-                <div class="divPic" onclick="ImgBorder(this)"><img class="Pic12" src="./assets/img/Pic 12.png" alt="Pic 12"></div>
+            <section class="portfolioPics" id="portfolioPics">
+                <div class="divPic"><img class="Pic1" src="./assets/img/Pic 1.png" alt="Pic 1" ></div>
+                <div class="divPic"><img class="Pic2" src="./assets/img/Pic 2.png" alt="Pic 2" ></div>
+                <div class="divPic"><img class="Pic3" src="./assets/img/Pic 3.png" alt="Pic 3" ></div>
+                <div class="divPic"><img class="Pic4"src="./assets/img/Pic 4.png" alt="Pic 4" ></div>
+                <div class="divPic"><img class="Pic5"src="./assets/img/Pic 5.png" alt="Pic 5"></div>
+                <div class="divPic"><img class="Pic6" src="./assets/img/Pic 6.png" alt="Pic 6" ></div>
+                <div class="divPic"><img class="Pic7" src="./assets/img/Pic 7.png" alt="Pic 7" ></div>
+                <div class="divPic"><img class="Pic8" src="./assets/img/Pic 8.png" alt="Pic 8"></div>
+                <div class="divPic"><img class="Pic9" src="./assets/img/Pic 9.png" alt="Pic 9"></div>
+                <div class="divPic"><img class="Pic10" src="./assets/img/Pic 10.png" alt="Pic 10" ></div>
+                <div class="divPic"><img class="Pic11" src="./assets/img/Pic 11.png" alt="Pic 11" ></div>
+                <div class="divPic"><img class="Pic12" src="./assets/img/Pic 12.png" alt="Pic 12"></div>
             </section>
     </section>
 </section>
@@ -169,48 +179,54 @@
              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             
         <section class="profilePhotos">
-        <div class="profilePic" id="Adam"><img src="./assets/img/Adam.png" alt="Adam"></div>
-        <div class="profilePic" id="Desmond"><img src="./assets/img/Desmond.png" alt="Desmond"></div>
-        <div class="profilePic" id="Scolara"><img src="./assets/img/Scolara.png" alt="Scolara"></div>
+        <div class="profilePic" id="Adam"><img src="./assets/img/Adam.png" alt="Adam">
+            <section class="profileDescription">
+                <div>
+                    <a href="#"><h2>Adam Jensen</h2></a>
+                    <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, 
+                        nec rutrum tellus dolor id lorem.</p>
+                </div>
+            </section>
+            <div class="profileIconsContainer">
+                <div class="ico"><a href="https://www.facebook.com/"><img src="./assets/img/facebook.png" alt="Facebook"></a></div>
+                <div class="ico"><a href="https://plus.google.com/"><img src="./assets/img/google+.png" alt="Google+"></a></div>
+                <div class="ico"><a href="https://twitter.com/"><img src="./assets/img/twitter.png" alt="Twitter"></a></div>
+                <div class="ico"><a href="https://www.linkedin.com/"><img src="./assets/img/linkedin.png" alt="Linked In"></a></div>
+            </div>
+        </div>
+        <div class="profilePic" id="Desmond"><img src="./assets/img/Desmond.png" alt="Desmond">
+            <section class="profileDescription">
+                <div>
+                    <a href="#"><h2>Desmond Miles</h2></a>
+                    <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, 
+                        viverra lacus ut, ultrices velit.</p>
+                </div>
+             </section>
+             <div class="profileIconsContainer">
+                <div class="ico"><a href="https://www.facebook.com/"><img src="./assets/img/facebook.png" alt="Facebook"></a></div>
+                <div class="ico"><a href="https://plus.google.com/"><img src="./assets/img/google+.png" alt="Google+"></a></div>
+                <div class="ico"><a href="https://twitter.com/"><img src="./assets/img/twitter.png" alt="Twitter"></a></div>
+                <div class="ico"><a href="https://www.linkedin.com/"><img src="./assets/img/linkedin.png" alt="Linked In"></a></div>
+            </div>
+        </div>
+        <div class="profilePic" id="Scolara"><img src="./assets/img/Scolara.png" alt="Scolara">
+                <section class="profileDescription">
+                    <div>
+                        <a href="#"><h2>Scolara Visari</h2></a>
+                        <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, 
+                            et consequat felis. Quisque condimentum.</p>
+                    </div>
+                </section>
+                <div class="profileIconsContainer">
+                    <div class="ico"><a href="https://www.facebook.com/"><img src="./assets/img/facebook.png" alt="Facebook"></a></div>
+                    <div class="ico"><a href="https://plus.google.com/"><img src="./assets/img/google+.png" alt="Google+"></a></div>
+                    <div class="ico"><a href="https://twitter.com/"><img src="./assets/img/twitter.png" alt="Twitter"></a></div>
+                    <div class="ico"><a href="https://www.linkedin.com/"><img src="./assets/img/linkedin.png" alt="Linked In"></a></div>
+                </div>
+        </div>
             
         </section>
-        <section class="profileDescription">
-            <div>
-                <a href="#"><h2>Adam Jensen</h2></a>
-                <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, 
-                    nec rutrum tellus dolor id lorem.</p>
-            </div>
-            <div>
-                <a href="#"><h2>Desmond Miles</h2></a>
-                <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, 
-                    viverra lacus ut, ultrices velit.</p>
-            </div>
-            <div>
-                <a href="#"><h2>Scolara Visari</h2></a>
-                <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, 
-                    et consequat felis. Quisque condimentum.</p>
-            </div>
-        </section>
-        <section class="profileIcons">
-            <div class="profileIconsContainer">
-                <div class="ico"><a href="https://www.facebook.com/"><img src="./assets/img/facebook.png" alt="Facebook"></a></div>
-                <div class="ico"><a href="https://plus.google.com/"><img src="./assets/img/google+.png" alt="Google+"></a></div>
-                <div class="ico"><a href="https://twitter.com/"><img src="./assets/img/twitter.png" alt="Twitter"></a></div>
-                <div class="ico"><a href="https://www.linkedin.com/"><img src="./assets/img/linkedin.png" alt="Linked In"></a></div>
-            </div>
-            <div class="profileIconsContainer">
-                <div class="ico"><a href="https://www.facebook.com/"><img src="./assets/img/facebook.png" alt="Facebook"></a></div>
-                <div class="ico"><a href="https://plus.google.com/"><img src="./assets/img/google+.png" alt="Google+"></a></div>
-                <div class="ico"><a href="https://twitter.com/"><img src="./assets/img/twitter.png" alt="Twitter"></a></div>
-                <div class="ico"><a href="https://www.linkedin.com/"><img src="./assets/img/linkedin.png" alt="Linked In"></a></div>
-            </div>
-            <div class="profileIconsContainer">
-                <div class="ico"><a href="https://www.facebook.com/"><img src="./assets/img/facebook.png" alt="Facebook"></a></div>
-                <div class="ico"><a href="https://plus.google.com/"><img src="./assets/img/google+.png" alt="Google+"></a></div>
-                <div class="ico"><a href="https://twitter.com/"><img src="./assets/img/twitter.png" alt="Twitter"></a></div>
-                <div class="ico"><a href="https://www.linkedin.com/"><img src="./assets/img/linkedin.png" alt="Linked In"></a></div>
-            </div>
-        </section>
+      
 </section>
 </section>
 <section class="getQuote" id="contact">
@@ -218,13 +234,13 @@
         <h1>Get a Quote</h1>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat
         porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>      
-        <section class="getQuoteContent" id="getQuoteContent">
-            <form class="getQuoteInputs">    
+        <section class="getQuoteContent">
+            <form class="getQuoteInputs" id="form">    
                 <input type="text" id="name" name="name" required placeholder="Name(Required)"size="70">
                 <input type="email" id="email" name="email" required placeholder="Email(Required)"size="70">
                 <input type="text" id="subject" name="subject" placeholder="Subject"size="70">
                 <textarea id="message" name="message"  placeholder="Describe your project in detail..."rows="10" cols="70"></textarea>
-                <button type="submit" onclick="Submit()">Submit</button>
+                <button type="submit" id='submit-btn'>Send</button>
             </form>
             <section class="contactInfo">
                 <h2>Contact Information</h2>
@@ -241,6 +257,16 @@
                 </section>
             </section>
         </section>
+        <div class="hidden" id="message-block">
+            <div id="message-box">
+                <h2>The letter was sent</h2>
+                <p id="subject-result"></p>
+                <p id="description-result"></p>
+                <button id="close-btn">OK</button>
+            </div>
+
+
+        </div>
     </section>
 </section>
 
@@ -257,5 +283,6 @@
     </section>
 </footer>
 </div> 
+<script src="script.js"></script>
 </body>
 </html>
