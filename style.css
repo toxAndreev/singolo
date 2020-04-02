@@ -471,43 +471,7 @@ body {
 .divPic:nth-child(n+13) {
     display: none;
 }
-.Pic1 {
-    margin: -11px 0 0 -8px;
-}
-.Pic2 {
-    
-  margin: -43px 0 0 -82px;
-}
-.Pic3 {
-    margin: -1px 0 0 -11px;
-}
-.Pic4 {
-    margin: -2px 0 0 -24px;
-}
-.Pic5 {
-    margin: -16px 0 0 -10px;
-}
-.Pic6 {
-    margin: -4px 0 0 -16px;
-}
-.Pic7 {
-    margin: -39px 0 0 -31px;
-}
-.Pic8 {
-    margin: -32px 0 0 -24px;
-}
-.Pic9 {
-    margin:-2px 0 0 -16px;
-}
-.Pic10 {
-    margin:-113px 0 0 -141px;
-}
-.Pic11 {
-    margin:-175px 0 0 -144px;
-}
-.Pic12 {
-    margin: -60px 0 0 -36px;
-}
+
 .divPic {
     overflow: hidden;
 }
