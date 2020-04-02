@@ -1,15 +1,12 @@
-main{
+
+main {
     padding: 0 auto;
     margin: 0 auto;
     max-width: 1020px;
     background-color: #2d303a;
 }
 
-header{
-    position: fixed;
-    z-index: 1000;    
-}
-.headerContainer{
+header {
     background-color: #2d303a;
     color:white;
     display: flex;
@@ -21,14 +18,21 @@ header{
     background-color: #2d303a;
     height: 89px;
     border-bottom: 6px solid #323746;
-    width: 100vw;
-    min-width: 320px;
     max-width: 1020px;
-    
-
-    
+    position: sticky;
+    top: 0px;
+	z-index: 999;
 }
-.logo h1{
+
+.ham-menu {
+	display: none;
+}
+
+.header-nav-tablet {
+	display: none;
+}
+
+.logo h1 {
     margin-left:40px;
     padding-top: 5px;
     font-size: 25px;
@@ -40,19 +44,19 @@ header{
     letter-spacing: -0.4px;
     font-stretch: ultra-condensed;
 }
-.logo-star{
+.logo-star {
     color:  #f06c64;
 }
-.logo h1::after{
+.logo h1::after {
     content: "*";
     color:  #f06c64;
     margin-right:2px ;
 }
-.logo{
+.logo {
     display: flex;
     flex-direction: row;
 }
-.header-nav-list{
+.header-nav-list {
     
     margin: 0;
     padding: 0;
@@ -65,7 +69,7 @@ header{
     font-weight: 500;
     text-align: left;
 }
-.header-nav-list li a{
+.header-nav-list li a {
     line-height: 6px;
     font-size: 12px;
     color:white;
@@ -82,187 +86,73 @@ header{
     margin-left: 2px;
     margin-top: 105px;
 }
-.header-nav{
+.header-nav {
     padding-top:10px;
     padding-right: 30px;
 }
-.header-nav li a:hover{
-color:#f06c64;
-}
-.header-nav-list li .active{
+.header-nav li a:hover {
     color:#f06c64;
 }
-.slider{
+.header-nav-list li .active {
+    color:#f06c64;
+}
+.slider {
     background-color: #f06c64;
-    height: 58.8vw;
-    max-height: 594px;
+    height: 594px;
     max-width: 1020px;
     border-bottom:6px solid #ea676b;
-    overflow: hidden;
-    position: relative;
-    min-width: 320px;
 }
-.verticalPhone{
+.verticalPhone {
     position: absolute;
     background: url(assets/img/iPhone_Vertical.png) no-repeat;
+    height: 50vh;
+    width: 40vw;
     background-size: contain;
-    height: 47.7vw;
-    max-height:486px;
-    width: 301px;
     border: none;
-    margin-left: 11vw;
-    margin-top: 5vw;
-    z-index:0;
+    margin-left: 110px;
+    margin-top: 51px;
 }
-.horizontalPhone{
+.horizontalPhone {
     position: absolute;
     background: url(assets/img/iPhone_Horizontal.png) no-repeat;
+    height: 25vh;
+    width: 47vw;
     background-size: contain;
-    height: 23vw;
-    max-height:241px;
-    width: 46.3vw;
-    max-width: 485px;
     border: none;
-    margin-left: 41.6vw;
-    margin-top: 17vw;
-    z-index: 0;
+    margin-left: 424px;
+    margin-top: 173px;
 }
-.leftArrow{
-   
+.leftArrow {
+    margin-top: 281px;
     position: absolute;
     background: url(assets/img/leftArrow.png) no-repeat;
     height:30px;
-    width: 30px;
+	background-size: contain;
+    max-width: 30px;
     border: none;
-    /*margin-left: 42px; 
-    margin-top: 281px;*/
+    margin-left: 42px;
     cursor: pointer;
-    z-index: 100;
 }
-.leftArrowContainer{
-    height: 30px;
-    width: 17px;
-    margin-left: 3.5vw;
-}
-.leftArrow:hover{
+.leftArrow:hover {
     opacity: 0.7;
 }
-.rightArrow{
+.rightArrow {
     position: absolute;
     background: url(assets/img/rightArrow.png) no-repeat;
+	background-size: contain;
     height:30px;
-    width: 30px;
+    max-width: 30px;
     border: none;
-   /* margin-left: 964px;
-    margin-top: 281px;*/
+    margin-left: 964px;
+    margin-top: 281px;
     cursor: pointer;
-    z-index: 100;
 }
-.rightArrowContainer{
-    height: 30px;
-    width: 17px;
-    margin-right: 3.5vw;
-}
-.rightArrow:hover{
+.rightArrow:hover {
     opacity: 0.7;
 }
-.sliderContainer{
-    display: flex;
-    max-width: 1020px;
-    max-height: 594px;
-    height: 50.43vw;
-}
-.arrows{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 53.5vw;
-    position: absolute;
-    max-height: 594px;
-    width: 100vw;
-    max-width: 1020px;
-    min-width: 320px;
-}
-.phones{
-    width: 1020px;
-    float: left;
-}
-.secondSlide{
-  
-    background: url(assets/img/Slide2.png) no-repeat;
-    height: 58.8vw;
-    max-height: 594px;
-    max-width: 1020px;
-    width: 100%;
-    background-size: cover;
-    /*transition: all 2s ease-in-out;*/
-   
-   
-}
-/*
-.activeSlide{
-    
-    animation-name: left;
-    animation-duration: 4s;
-    animation-delay: 2s;
-}
-@-webkit-keyframes left {
-    from {left:0px;}
-    to {left:1020px;}
-  }*/
-.blackScreenVertical{
-    width: 190px;
-    height: 335px;
-    background-color: transparent;
-    margin:65px 0 0 15px;
-    border-radius: 1%;
-    
-}
-
-.buttonVertical{
-    width: 40px;
-    height: 40px;
-    border:none;
-    background-color:transparent;
-    border-radius: 50%;
-    opacity: 0.5;
-    margin:10px 0 0 89px;
-    cursor: pointer;
-}
-.buttonVertical:hover{
-    background-color: #f06c64;
-    opacity:0.5;
-}
-.blackScreenHorizontal{
-    width: 335px;
-    height: 190px;
-    background-color: transparent;
-    margin:-117px 0 0 60px;
-    border-radius: 1%;
-    
-}
-
-.buttonHorizontal{
-    width: 40px;
-    height: 40px;
-    border:none;
-    background-color: transparent;
-    border-radius: 50%;
-    opacity: 0.5;
-    margin:88px 0 0 10px;
-    cursor: pointer;
-}
-.buttonHorizontal:hover{
-    background-color: #f06c64;
-    opacity:0.5;
-}
-.Services{
+.Services {
     padding-top:10px;
-    min-width: 320px;
-    min-height: 484px;
-    width: 100%;
+ /*   height: 484px;*/
     max-width: 1020px;
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
@@ -270,7 +160,7 @@ color:#f06c64;
 .Serv-Content {
     margin:60px 30px 35px 40px ;
 }
-.Serv-Content h1{
+.Serv-Content h1 {
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
@@ -279,7 +169,7 @@ color:#f06c64;
     text-align: left;
     margin-bottom: 25px;
 }
-.Serv-Content p{
+.Serv-Content p {
     display: block;
     text-align: justify;
     font-size: 18px;
@@ -292,15 +182,14 @@ color:#f06c64;
     margin-top: 27px;
     word-spacing: 0px;
 }
-.containerServices{
+.containerServices {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: center;
     margin-top: 29px;
-    justify-content: space-evenly;
 }
-.containerServices h2{
+.containerServices h2 {
     font-size: 19px;
     line-height: 18px;
     color: #666d89;
@@ -310,11 +199,11 @@ color:#f06c64;
     word-spacing: -0.5px;
     letter-spacing: -0.5px;
 }
-.containerServices h2:hover{
+.containerServices h2:hover {
     opacity: 0.7;
     cursor: pointer;
 }
-.containerServices p{
+.containerServices p {
     width: 219px;
     height: 128px;
     font-size: 12px;
@@ -327,93 +216,96 @@ color:#f06c64;
     word-spacing: -0.7px;
     letter-spacing: 0.1px;  
 }
-.CustomDesign{ 
+.CustomDesign { 
     margin-left: 20px;
-   
+    margin-bottom:-50px ; 
     height: 183px;
 }
-.CustomDesign h2{
+.CustomDesign h2 {
     letter-spacing: -0.55px;
 }
-.CustomDesign p{
+.CustomDesign p {
     padding-top: 1px;
     padding-left: 1px;
     height: 60px;
     overflow: hidden;    
 }
-.CustomDesignLogo{
+.CustomDesignLogo {
     background: url(assets/img/pen.png);
     width: 60px;
     background-repeat: no-repeat;
     margin-top: 15px;
 }
-.Ideas{
-   
+.Ideas {
+    margin-left: 20px;
+    margin-bottom:-50px ;
 }
-.Ideas h2{
+.Ideas h2 {
     letter-spacing: -0.3px;
 }
-.Ideas p{
+.Ideas p {
     padding-top: 1px;
     padding-left: 1px;
     height: 60px;
     overflow: hidden;
 }
-.IdeasLogo{
+.IdeasLogo {
     background: url(assets/img/lightbulb.png);
     width: 60px;
     background-repeat: no-repeat;
     margin-top: 15px;
-   
+    margin-left: 19px;
 }
 
-.LoveIs{
-  
+.LoveIs {
+    margin-left: 22px;
+    margin-bottom:-50px ;
 }
-.LoveIs p{
+.LoveIs p {
     padding-top: 1px;
-   
+    margin-left: -1px;
     height: 60px;
     overflow: hidden;
 }
-.LoveIs h2{
+.LoveIs h2 {
     margin-left: 0px;
     word-spacing: 0px;
 }
-.LoveIsLogo{
+.LoveIsLogo {
     background: url(assets/img/heart.png);
     width: 60px;
     background-repeat: no-repeat;
     margin-top: 15px;
-    
+    margin-left: 20px;
 }
-.Responsive{
-  
+.Responsive {
+    margin: -10px 0 0 20px;;
 }
-.Responsive p{
-      
+.Responsive p {
+    margin-top: -7px;
+    margin-left: 2px;
     text-align: justify;
     word-spacing: -1.1px;
     letter-spacing: 0px;
     height: 60px;
     overflow: hidden;
 }
-.ResponsiveLogo{
+.ResponsiveLogo {
     background: url(assets/img/phone.png);
     width: 60px;
     background-repeat: no-repeat;
-    margin-top: 15px;
+    margin-top: 5px;
 }
-.Support{
-    
- 
+.Support {
+    margin-left: 19px;
+    margin-top: -8px;   
 }
-.Support h2{
+.Support h2 {
     margin-top: 14px;
     margin-left: -2px;
     word-spacing: -1px;
 }
-.Support p{
+.Support p {
     margin-top: -7px;
     text-align: justify;
     word-spacing: -1px;
@@ -421,99 +313,94 @@ color:#f06c64;
     height: 60px;
     overflow: hidden;
 }
-.SupportLogo{
+.SupportLogo {
     background: url(assets/img/bubble.png);
     width: 60px;
     background-repeat: no-repeat;
-    margin-top: 15px;
-   
-   
+    margin-top: 5px;
+    margin-left: 18px;
+    margin-right: 2px;
 }
-.LikeAStar{
-    width: 220px;
+.LikeAStar {
+    margin-left: 21px;
+    margin-top: -8px;
+    max-width: 220px;
     height: 100px;
 }
-.LikeAStar h2{
+.LikeAStar h2 {
     letter-spacing: -0.3px;
     margin-top: 14px;
-  
+    margin-left: -1px;
 }
-.LikeAStar p{
+.LikeAStar p {
     margin-top: -7px;
-    
+    margin-left: -2px;
     height: 60px;
     overflow: hidden;
     text-align: justify;
 }
-.LikeAStarLogo{
+.LikeAStarLogo {
     background: url(assets/img/Star.png);
     width: 60px;
     background-repeat: no-repeat;
-    margin-top: 15px;
-    
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 2px;
 }
-@font-face{
-    font-family: Lato-Regular;
-    src: url(assets/fonts/LatoLatin/LatoLatin-Regular.woff)
+@font-face {
+  font-family: lato; 
+  src: url(assets/lato/Lato-Thin.ttf); 
 }
-@font-face{
-    font-family: Lato-Black;
-    src: url(assets/fonts/LatoLatin/LatoLatin-Black.woff)
+
+@font-face {
+  font-family: lato-bold; 
+  src: url(assets/lato/Lato-Bold.ttf); 
 }
-@font-face{
-    font-family: Lato-Bold;
-    src: url(assets/fonts/LatoLatin/LatoLatin-Bold.woff);
+
+@font-face {
+  font-family: lato-medium; 
+  src: url(assets/lato/Lato-Medium.ttf); 
 }
-@font-face{
-    font-family: Lato-Light;
-    src: url(assets/fonts/LatoLatin/LatoLatin-Light.woff);
+
+@font-face {
+  font-family: lato-Black; 
+  src: url(assets/lato/Lato-Black.ttf); 
 }
-@-moz-document url-prefix() {
-    h2 {
-      font-weight: lighter !important;
-    }
-    h1 {
-        font-weight: lighter !important;
-      }
-      p {
-        font-weight: lighter !important;
-      }
-      button{
-        font-weight: lighter !important;
-        padding: 5px;
-      }
-      .contactInfo p{
-          margin-bottom:-3px;
-      }
-      .contacts p{
-          margin-bottom:11.5px;
-      }
-     
-  }
-body{
+
+@font-face {
+  font-family: lato-regular; 
+  src: url(assets/lato/Lato-Regular.ttf); 
+}
+
+@font-face {
+  font-family: lato-light; 
+  src: url(assets/lato/Lato-Light.ttf); 
+}
+
+body {
     padding: 0;
     margin: 0 auto;
     max-width: 1020px;
     background-color: cadetblue;
 }
-.container{
+.container {
     padding: 0;
-    margin: 0 4vw;
+    margin: 0 auto;
     max-width: 940px;
+	margin-left: 30px;
+	margin-right: 30px;
     
 }
 
-.Portfolio{
-    min-width: 320px;
+.Portfolio {
     margin-top: -31px;
-    width: 100%;
     max-width: 1020px;
-    height: 1102px;
     background-color: #2d303a;
     border-bottom: 5px solid #323746;
+	padding-bottom: 25px;
  
 }
-.Portfolio h1{
+.Portfolio h1 {
     padding-top: 71px;
     font-size: 31px;
     line-height: 18px;
@@ -521,7 +408,7 @@ body{
     font-family: "Lato-Bold";
     font-weight: 900;
 }
-.Portfolio p{
+.Portfolio p {
     margin-top: -5px;
     word-spacing: -1.3px;
     font-size: 18px;
@@ -532,16 +419,15 @@ body{
     text-align: left;
     overflow: hidden;
 }
-.aboutUs{
-    min-width: 320px;
+.aboutUs {
     max-width: 1020px;
-    min-height: 728px;
     background-color: #f2f2f2;
     margin-top: -31px;
     border-bottom: 6px solid #ffffff;
+	position: relative;
    
 }
-.buttonsSort button{
+.buttonsSort button {
    
     border-radius: 5px;
     background-color:transparent;
@@ -555,78 +441,78 @@ body{
     height: 22px;
     
 }
-.buttonsSort .activeTab{
-    color: #000;
-    background-color: cadetblue;
-}
-.buttonsSort{
+
+.buttonsSort {
     display: flex;
-    width: 295px;
+    max-width: 295px;
     margin: -9px 0 19px 0;
     justify-content: space-around;
     
 }
-.buttonsSort button:hover{
+.buttonsSort button:hover {
     color:#ffffff;
     cursor: pointer;
 }
-.portfolioPics{
+
+.buttonsSort button:focus {
+    color:#ffffff;
+    border: white;
+}
+
+.portfolioPics {
     margin-top: 17px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    grid-template-columns: repeat(4, 220px);
+    grid-template-rows: repeat(3,187px);
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     overflow: hidden;
 }
-.activePic{
-    border: 5px solid #F06C64;
-}
-.divPic:nth-child(n+13){
+.divPic:nth-child(n+13) {
     display: none;
-}/*
-.Pic1{
+}
+.Pic1 {
     margin: -11px 0 0 -8px;
 }
-.Pic2{
+.Pic2 {
     
   margin: -43px 0 0 -82px;
 }
-.Pic3{
+.Pic3 {
     margin: -1px 0 0 -11px;
 }
-.Pic4{
+.Pic4 {
     margin: -2px 0 0 -24px;
 }
-.Pic5{
+.Pic5 {
     margin: -16px 0 0 -10px;
 }
-.Pic6{
+.Pic6 {
     margin: -4px 0 0 -16px;
 }
-.Pic7{
+.Pic7 {
     margin: -39px 0 0 -31px;
 }
-.Pic8{
+.Pic8 {
     margin: -32px 0 0 -24px;
 }
-.Pic9{
+.Pic9 {
     margin:-2px 0 0 -16px;
 }
-.Pic10{
+.Pic10 {
     margin:-113px 0 0 -141px;
 }
-.Pic11{
+.Pic11 {
     margin:-175px 0 0 -144px;
 }
-.Pic12{
+.Pic12 {
     margin: -60px 0 0 -36px;
-}*/
-.divPic{
+}
+.divPic {
     overflow: hidden;
-    cursor: pointer;
 }
 
-.aboutUs h1{
+.aboutUs h1 {
     padding: 70px 0  0 0;
     word-spacing: -0.3px;
     letter-spacing: -0.7px;
@@ -635,8 +521,9 @@ body{
     color: #666d89;
     font-family: "Lato-Bold";
     font-weight: 900;
+	padding-bottom: 25px;
 }
-.aboutUs p{
+.aboutUs p {
     margin-top: -5px;
     word-spacing: -0.4px;
     font-size: 18px;
@@ -647,34 +534,34 @@ body{
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
+	
 }
-.profilePhotos{
+.profilePhotos {
     margin-top: 44px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 300px);
     grid-column-gap: 19px;
     overflow: hidden;
 
 }
-.profilePic{
-    max-width: 300px;
-    width: 30vw;
+.profilePic {
+    height: 30vh;
+    max-width: 30vw;
     overflow: hidden;
 }
-.profilePic>img{
-    width: 30vw;
-    max-width: 300px;
-}
-#Scolara{
+#Scolara {
     margin-left: 2px;
 }
-.profileDescription{
+.profileDescription {
     margin-top: 3px;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-column-gap: 19px;
     overflow: hidden;
     text-overflow: ellipsis;
 
 }
-.profileDescription h2{
+.profileDescription h2 {
     word-spacing: -0.3px;
     letter-spacing: -0.6px;
     font-size: 19px;
@@ -686,7 +573,7 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.profileDescription p{
+.profileDescription p {
     margin-top: -6px;
     word-spacing: 0.9px;
     font-size: 12px;
@@ -699,40 +586,38 @@ body{
     text-overflow: ellipsis;
     text-align: justify;
 }
-.profileIcons{
+.profileIcons {
     margin-top: 12px;
     display: grid;
     grid-template-columns: repeat(3, 300px);
     grid-column-gap: 19px;
     overflow: hidden;
 }
-.profileIconsContainer:nth-child(3){
+.profileIconsContainer:nth-child(3) {
    margin-left: 1px;
 }
-.profileIconsContainer{
+.profileIconsContainer {
     padding-left: 1px;
-    width: 152px;
+    max-width: 152px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.getQuote{
-    min-width: 320px;
-    padding: 0;
+.getQuote {
+    padding: 0 30px;
     margin: 0 auto;
-    width: 100%;
     max-width: 1020px;
-    min-height: 650px;
     background-color: #f06c64;
     margin-top: -30px;
     border-bottom:4px solid #ea676b;
+	padding-bottom: 25px;
 }
-.containerQuote{
+.containerQuote {
     padding: 0;
-    margin: 0 4vw;
-    max-width: 940px;
+    margin: 0 auto;
+    width: 940px;
 }
-.containerQuote h1{
+.containerQuote h1 {
     font-family: "Lato-Bold";
     font-size: 30px;
     color: #F0D8D9;
@@ -740,7 +625,7 @@ body{
     word-spacing: -2.1px;
     letter-spacing: 0.35px;
 }
-.containerQuote p{
+.containerQuote p {
     font-family: "Lato-Light";
     font-size: 18px;
     color: #F0D8D9;
@@ -749,74 +634,70 @@ body{
     word-spacing: -0.35px;
     
 }
-.getQuoteContent{
+.getQuoteContent {
     display: grid;
-    grid-auto-flow:column;
+    grid-template-columns: 66% 34%;
     column-gap: 20px;
 }
-.getQuoteInputs{
+.getQuoteInputs {
     margin-top: 23px;
     display: grid;
-    width: 63vw;
     row-gap: 7px;
    
 }
-.getQuoteInputs input{
+.getQuoteInputs input {
     background-color: transparent;
     border: none;
     line-height: 6px;
     margin-bottom: 9px;
     padding-left: 15px;
-    width: 59.3vw;
     max-width: 604px;
     height: 36px;
     border-radius: 5px;
     background-color: #d6564f;
     
 }
-.getQuoteInputs input::placeholder{
+.getQuoteInputs input::placeholder {
     font-family: "Lato-Regular";
     font-size: 12px;
     color:#f48c8f;
     letter-spacing: 0.45px;
     
 }
-.getQuoteInputs textarea{
+.getQuoteInputs textarea {
     background-color: transparent;
     border: none;
     line-height: 33px;
     margin-bottom: 9px;
     padding-left: 15px;
-    width: 59.3vw;
     max-width: 602px;
     height: 198px;
     border-radius: 5px;
     background-color: #d6564f;
     resize: none;
 }
-.getQuoteInputs textarea::placeholder{
+.getQuoteInputs textarea::placeholder {
     font-family: "Lato-Regular";
     font-size: 12px;
     color:#f48c8f;
     word-spacing: -0.2px;
     letter-spacing: -0.1px;
 }
-.getQuoteInputs button{
+.getQuoteInputs button {
+    margin: 0 auto;
     width: 30%;
     height: 38px;
-    border-radius: 30px;
     border: none;
-    background-color: #2d303a;
-    color: #f4f4f5;
-    font-size: 20px;
-    text-transform: uppercase;
+	border-radius: 24px;
+    background-color: #FBC65F;
+    color: #886A30;
 }
-.getQuoteInputs button:hover{
+.getQuoteInputs button:hover {
     color:#fff;
     cursor: pointer;
 }
 
-.contactInfo h2{
+.contactInfo h2 {
     font-family: "Lato-Bold";
     margin-top: 23px;
     font-size: 18px;
@@ -824,7 +705,7 @@ body{
     word-spacing: -2.1px;
     letter-spacing: 0.35px;
 }
-.contactInfo p{
+.contactInfo p {
     font-family: "Lato-Regular";
     margin-top: -8px;
     font-size: 12px;
@@ -835,15 +716,13 @@ body{
     text-align: justify;
     padding-right: 17px;
 }
-.contactInfo{
+.contactInfo {
     margin-right: 1px;
-    min-width: 200px;
-    max-width: 300px;
 }
 .contacts {
     margin-top: 33px;
     margin-left: 15px;
-    width: 150px;
+    max-width: 150px;
     display: grid;
     grid-template-columns: auto 150px;
 }
@@ -855,21 +734,28 @@ body{
     text-align: justify;
     letter-spacing: 0.05px;
 }
-footer{
+footer {
     background-color: #2d303a;
-    min-width: 320px;
     height: 76px;
     max-width: 1020px;
 }
-.foot{
-    margin: 0 4vw;
-    max-width:940px;
+.foot {
+    margin: 0 auto;
+    max-width: 940px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.copyright{
+.footerImg {
+    max-width: 168px;
+    margin: 22px -8px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.copyright {
     font-family: "Lato-Regular";
     font-size: 12px;
     line-height: 18px;
@@ -879,638 +765,28 @@ footer{
     margin: 15px 0 0 1px;
 
 }
-.footerImg{
-    width: 168px;
-    margin: 22px -8px 0 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-a{
+a {
     text-decoration: none;
 }
-a h2:hover{
+a h2:hover {
     opacity: 0.5;
 }
-.map-icon{
+.map-icon {
     margin:-8px 11px 0 -12px;
 }
-.phone-icon{
+.phone-icon {
     margin:-9px 5px 0 -14px;
 }
-.mail-icon{
+.mail-icon {
     margin:-9px 5px 0 -15px;
 }
-.ico:hover{
+.ico:hover {
    border-radius: 50%;
    background-color: #f48c8f;
    height: 32px;
-   width: 32px;
+   max-width: 32px;
 }
-.divPic img:hover{
+.divPic img:hover {
     transition: 1s;
     transform: scale(1.2); 
-}
-.hidden{
-    display: none;
-}
-#message-block{
-    position: fixed;
-    width: 100vw;
-    height: 100vw;
-    top: 0;
-    left: 0;
-    background-color: rgba(234, 103, 107, 0.4);
-    z-index: 1000000;
-}
-#message-box{
-  
-    background-color: white;
-    max-width: 600px;
-    margin: 100px auto;
-    border: 2px solid black;
-    text-align: center;
-    color: black;
-    
-
-}
-#message-box p{
-    opacity: 1;
-    color: black;
-}
-.fixed{
-    height: 89px;
-    background-color: #2d303a;
-    z-index: 1;
-    border-bottom: 6px solid #323746;
-}
-.slide {
-    display: none;
-    position: absolute;
-    animation: 0.5s ease;
-    
-  }
-
-.activeSlide{
-  display: block;
- 
-  
-}
-
-.next {
-    display: block;
-    position: absolute;
-    width: 100%;
-}
-
-
-
-.to-left {
-  animation-name: left;
-}
-
-.from-right {
-  animation-name: right;
-}
-
-.to-right {
-  animation-name: right;
-  animation-direction: reverse;
-}
-
-.from-left {
-  animation-name: left;
-  animation-direction: reverse;
-}
-
-@keyframes left {
-  from {
-    left: 0%;
-  }
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes right {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0;
-  }
-}
-.servCell{
-    display: flex;
-    width: 300px;
-    max-height: 126px;
-    justify-content: space-between;
-}
-.hamburger{
-    display: none;
-}
-@media only screen and (min-width: 1020px) {
-    .verticalPhone{
-        background-size: unset;
-        height:500px;
-        width: 301px;
-        margin-left: 110px;
-        margin-top: 51px;
-    }
-    .horizontalPhone{
-        background-size: unset;
-        height:500px;
-        width: 500px;
-        margin-left: 424px;
-        margin-top: 173px;
-    }
-    .leftArrow{
-        margin-left: -25px;
-        margin-top: -1px;
-       
-    }
-    .rightArrow{
-        margin-left: 29px;
-        margin-top: -1px;
-    }
-    .getQuote{
-        padding: 0;
-        margin: 0 auto;
-        width: 1020px;
-        height: 650px;
-        background-color: #f06c64;
-        margin-top: -30px;
-        border-bottom:4px solid #ea676b;
-    }
-    .containerQuote{
-        padding: 0;
-        margin: 0 auto;
-        width: 940px;
-    }
-    .containerQuote h1{
-        font-family: "Lato-Bold";
-        font-size: 30px;
-        color: #F0D8D9;
-        padding-top: 62px;
-        word-spacing: -2.1px;
-        letter-spacing: 0.35px;
-    }
-    .containerQuote p{
-        font-family: "Lato-Light";
-        font-size: 18px;
-        color: #F0D8D9;
-        margin-top:-12px;
-        line-height:30px;
-        word-spacing: -0.35px;
-        
-    }
-    .getQuoteContent{
-        display: grid;
-        grid-template-columns: 66% 34%;
-        column-gap: 20px;
-    }
-    .getQuoteInputs{
-        margin-top: 23px;
-        display: grid;
-        row-gap: 7px;
-       
-    }
-    .getQuoteInputs input{
-        background-color: transparent;
-        border: none;
-        line-height: 6px;
-        margin-bottom: 9px;
-        padding-left: 15px;
-        width: 604px;
-        height: 36px;
-        border-radius: 5px;
-        background-color: #d6564f;
-        
-    }
-    .getQuoteInputs input::placeholder{
-        font-family: "Lato-Regular";
-        font-size: 12px;
-        color:#f48c8f;
-        letter-spacing: 0.45px;
-        
-    }
-    .getQuoteInputs textarea{
-        background-color: transparent;
-        border: none;
-        line-height: 33px;
-        margin-bottom: 9px;
-        padding-left: 15px;
-        width: 602px;
-        height: 198px;
-        border-radius: 5px;
-        background-color: #d6564f;
-        resize: none;
-    }
-    .getQuoteInputs textarea::placeholder{
-        font-family: "Lato-Regular";
-        font-size: 12px;
-        color:#f48c8f;
-        word-spacing: -0.2px;
-        letter-spacing: -0.1px;
-    }
-    .getQuoteInputs button{
-        width: 30%;
-        font-size: 20px;
-        text-transform: uppercase;
-        height: 38px;
-        border-radius: 30px;
-        border: none;
-        background-color: #2d303a;
-        color: #f4f4f5;
-    }
-    .getQuoteInputs button:hover{
-        color:#fff;
-        cursor: pointer;
-    }
-    
-    .contactInfo h2{
-        font-family: "Lato-Bold";
-        margin-top: 23px;
-        font-size: 18px;
-        color: #F0D8D9;
-        word-spacing: -2.1px;
-        letter-spacing: 0.35px;
-    }
-    .contactInfo p{
-        font-family: "Lato-Regular";
-        margin-top: -8px;
-        font-size: 12px;
-        line-height: 21.95px;
-        color: #F0D8D9;
-        word-spacing: -0.7px;
-        letter-spacing: -0.1px;
-        text-align: justify;
-        padding-right: 17px;
-    }
-    .contactInfo{
-        margin-right: 1px;
-    }
-    .contacts {
-        margin-top: 33px;
-        margin-left: 15px;
-        width: 150px;
-        display: grid;
-        grid-template-columns: auto 150px;
-    }
-    .contacts p {
-        font-family: "Lato-Regular";
-        font-size: 12px;
-        line-height: 18px;
-        color: #F0D8D9;
-        text-align: justify;
-        letter-spacing: 0.05px;
-    }
-    .profilePhotos{
-        margin-top: 44px;
-        display: grid;
-        grid-template-columns: repeat(3, 300px);
-        grid-column-gap: 19px;
-        overflow: hidden;
-    
-    }
-    .profilePic{
-        /*height: 300px;*/
-        width: 300px;
-        overflow: hidden;
-    }
-    #Scolara{
-        margin-left: 2px;
-    }
-    .profileDescription{
-        margin-top: 3px;
-        display: grid;
-        grid-template-columns: repeat(3, 300px);
-        grid-column-gap: 19px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    
-    }
-    .profileDescription h2{
-        word-spacing: -0.3px;
-        letter-spacing: -0.6px;
-        font-size: 19px;
-        line-height: 18px;
-        color: #666d89;
-        font-family: "Lato-Bold";
-        font-weight: 900;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .profileDescription p{
-        margin-top: -6px;
-        word-spacing: 0.9px;
-        font-size: 12px;
-        line-height: 20px;
-        color: #767e9e;
-        font-family: "Lato-Light";
-        font-weight: 300;
-        text-align: left;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        text-align: justify;
-    }
-    .profileIcons{
-        margin-top: 12px;
-        display: grid;
-        grid-template-columns: repeat(3, 300px);
-        grid-column-gap: 19px;
-        overflow: hidden;
-    }
-    .profileIconsContainer:nth-child(3){
-       margin-left: 1px;
-    }
-    .profileIconsContainer{
-        padding-left: 1px;
-        width: 152px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .container{
-        padding: 0;
-        margin: 0 auto;
-        max-width: 940px;
-        
-  }
-  .portfolioPics{
-    margin-top: 17px;
-    display: grid;
-    grid-template-columns: repeat(4, 220px);
-    grid-template-rows: repeat(3,187px);
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-    overflow: hidden;
-}
-.divPic:nth-child(n+13){
-    display: none;
-}
-.Portfolio{
-    margin-top: -31px;
-    width: 1020px;
-    height: 864px;
-    background-color: #2d303a;
-    border-bottom: 5px solid #323746;
- 
-}
-.Portfolio h1{
-    padding-top: 71px;
-    font-size: 31px;
-    line-height: 18px;
-    color: #666d89;
-    font-family: "Lato-Bold";
-    font-weight: 900;
-}
-.Portfolio p{
-    margin-top: -5px;
-    word-spacing: -1.3px;
-    font-size: 18px;
-    line-height: 30px;
-    color: #767e9e;
-    font-family: "Lato-Light";
-    font-weight: 300;
-    text-align: left;
-    overflow: hidden;
-}
-
-}
-@media only screen and (max-width:760px) {
-    .portfolioPics{
-        margin-top: 17px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(29vw,1fr));
-        overflow: hidden;
-    }
-    .divPic>img{
-        width: 54%;
-    }
-    .divPic:nth-child(n+9){
-        display: none;
-    }
-    .Portfolio{
-        margin-top: -31px;
-        width: 100%;
-        max-width: 1020px;
-        min-height: 886px;
-        background-color: #2d303a;
-        border-bottom: 5px solid #323746;
-     
-    }
-    .headerContainer{
-        display: block;
-    }
-    .logo{
-        width: 54%;
-        margin: 0 auto;
-        
-    }
-    .header-nav>.logo>h1{
-        position: absolute;
-        font-size: 19.6875px;
-        margin: -50px 0 50px 20px;
-    }
-    .hamburger{
-        display: inline-block;
-    }
-    .hamburger input {
-        opacity: 0;
-      }
-      
-      .hamburger input:checked ~ .menu__btn > div {
-        transform: rotate(90deg);
-      }
-      
-      .hamburger input:checked ~ .header-nav {
-        visibility: visible;
-        left: 0;
-      }
-      
-      .menu__btn {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 29px;
-        left: 35px;
-        width: 26px;
-        height: 26px;
-      
-        cursor: pointer;
-        z-index: 1;
-      }
-      
-      .menu__btn > div,
-      .menu__btn > div::before,
-      .menu__btn > div::after {
-        display: inline-block;
-        position: absolute;
-      
-        width: 100%;
-        height: 2px;
-      
-        background-color: #616161;
-      
-        transition-duration: .25s;
-      }
-      .menu__btn > div::before {
-        content: '';
-        top: -8px;
-      }
-      .menu__btn > div::after {
-        content: '';
-        top: 8px;
-      }
-      
-      .header-nav {
-        display: block;
-        position: absolute;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-        max-width: 75%;
-        height: 100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        background: #2D303A;
-        box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
-        transition-duration: .25s;
-      }
-      .header-nav-list {
-        margin: 30vw auto;
-        height: 80vw;
-        width: 50%;
-        position: relative;
-        display: flex;      
-        list-style: none;
-        flex-direction: column;
-        justify-content: space-around;
-        align-content: center;
-      
-    }
-    .header-nav-list li a{
-        font-size: 20px;
-    }
-    .header-nav-list li::after{
-        display: none;
-    }
-      .header-nav{
-        display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-      
-        width: 300px;
-        height: 100%;
-      
-        margin: 0;
-        padding: 80px 0;
-      
-        list-style: none;
-      
-        background: #2D303A;
-        box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
-      
-        transition-duration: .25s;
-      }
-      .copyright{
-        display: none;
-    
-    }
-    .foot{
-        margin: 0 4vw;
-        max-width: 940px;
-        display: flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items: center;
-    }
-      
-      
-      
-}
-@media only screen and (max-width: 400px) {
-    .portfolioPics{
-        margin-top: 17px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(28vw,1fr));
-        overflow: hidden;
-    }
-    .divPic>img{
-        width: 100%;
-    }
-    .divPic:nth-child(n+9){
-        display: none;
-    }
-    .Portfolio{
-        margin-top: -31px;
-        width: 100%;
-        max-width: 1020px;
-        max-height: 886px;
-        background-color: #2d303a;
-        border-bottom: 5px solid #323746;
-     
-    }
-    .profilePhotos{
-        margin-top: 44px;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-column-gap: 19px;
-        overflow: hidden;
-    
-    }
-    .profilePic{
-        max-width: 378px;
-        width: 72vw;
-        overflow: hidden;
-        margin: 0 auto;
-    }
-    .profilePic>img{
-        width: 72vw;
-        max-width: 508px;
-    }
-    #Scolara{
-        margin-left: auto;
-    }
-    .profileIconsContainer{
-        margin-bottom: 3vw;
-    }
-    .getQuoteContent{
-        display: grid;
-        grid-auto-flow: row;
-    }
-    .getQuoteInputs input{
-        width: 86.3vw;
-    }
-    .getQuoteInputs textarea{
-        width: 86.3vw;
-    }
-    .getQuoteInputs button{
-        width: 100%;
-    }
-    .Ideas{
-        margin-left: 20px;
-    }
-    
-    
-    .LoveIs{
-        margin-left: 20px;
-    }
-      .Responsive{
-        margin-left: 20px;
-    }
-    .Support{
-        margin-left: 20px;
-     
-    }
-    
-    .LikeAStar{
-        margin-left: 20px;
-    }
 }

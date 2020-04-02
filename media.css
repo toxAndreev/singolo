@@ -1,0 +1,205 @@
+@media only screen 
+  and (max-width: 1020px)
+  and (min-width: 768px) {
+
+.horizontalPhone {
+   margin-left: 355px;
+}
+
+.rightArrow {
+   margin-left: 735px;
+}
+
+.portfolioPics {
+   
+   grid-template-columns: repeat(3, 220px);
+   grid-template-rows: repeat(4,187px);
+}
+
+.profilePhotos, .profileDescription, .profileIcons {
+   grid-template-columns: repeat(3, 220px);
+}
+
+.profilePhotos img {
+   width: 30vw;
+   height: 30vh;	
+}
+
+.getQuoteContent {
+   grid-template-columns: 55% 37%;
+   column-gap: 30px;
+}
+
+.containerQuote {
+   width: 768px;	
+}
+
+.getQuoteInputs input, .getQuoteInputs textarea {
+   width: 420px;
+}
+
+.foot {
+   margin: 0 30px;	
+}	
+}
+
+@media only screen and (max-width: 375px) {
+
+header {
+  justify-content: center;
+}	
+	
+.ham-menu {
+    display: block;
+    position: absolute;
+    left: 20px;
+}	
+	
+.ham-menu img {
+    position: relative;
+    z-index: 100;
+}	
+	
+.ham-menu:hover {
+	cursor: pointer;
+}	
+	
+.logo-tablet {
+   justify-content: center;
+}	
+	
+.header-nav-tablet {
+    position: absolute;
+	top: -17px;
+    left: -20px;
+    width: 300px;
+    height: 100vh;
+	background-color: #2d303a;
+	z-index: 1;
+}	
+
+.header-nav-list-tablet {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	font-size: 65px;
+	position: relative;
+    top: 100px;
+}
+
+.header-nav-list-tablet li a {
+	font-size: 24px;
+}
+	
+.header-nav {
+  display: none;
+}	
+	
+.slider {
+    height: 300px;   	
+}
+
+.leftArrow {
+    margin-top: 143px;
+    margin-left: 9px;	
+}
+
+.rightArrow {
+	margin-left: 354px;
+    margin-top: 143px;
+}
+
+.verticalPhone {
+	height: 23vh;
+    width: 26vw;
+	margin-left: 10vw;
+}
+
+.horizontalPhone {
+    width: 47vw;
+    margin-left: 168px;
+    margin-top: 113px;	
+}
+
+.containerServices {
+    display: grid;
+    grid-template-columns: 27% 50%;
+	grid-template-rows: repeat(6,100px);
+    row-gap: 30px;
+}
+
+.CustomDesignLogo, .IdeasLogo, .LoveIsLogo, .ResponsiveLogo, .SupportLogo, .LikeAStarLogo {
+	margin-left: 0;
+	margin-right: 0;
+	
+}
+
+.portfolioPics {
+	max-height: 569px;
+    grid-template-columns: repeat(2, 151px);
+    grid-template-rows: repeat(4,127px);
+}
+
+.aboutUs {
+    height: 1770px;	
+}
+
+.profilePic {
+	max-width: 81vw;
+}
+
+.profilePhotos {
+	grid-template-rows: repeat(1, 300px) !important;
+	grid-template-columns: repeat(1, 300px);
+	grid-row-gap: 170px;
+}
+
+.profileDescription {
+	grid-template-rows: repeat(3, 300px) !important;
+	grid-template-columns: repeat(1, 300px);
+    grid-row-gap: 170px;
+	position: absolute;
+    top: 659px;
+}
+
+.profileIcons {
+	grid-template-rows: repeat(3, 300px) !important;
+	grid-template-columns: repeat(1, 300px);
+    grid-row-gap: 170px;
+	position: absolute;
+    top: 755px;
+}
+
+.profilePic {
+	max-width: 81vw;
+}
+
+.containerQuote {
+    width: 300px;
+}
+
+.getQuoteContent {
+    display: block;
+}
+
+.getQuoteInputs input, .getQuoteInputs textarea, .footerImg {
+   width: 300px;
+}
+
+.getQuoteInputs button {
+	width: 100%;
+}
+
+.copyright {
+	display: none;
+}
+
+.footerImg {
+    margin: 22px auto;
+}
+
+.footerImg div {
+    padding: 0 10px;
+}
+
+}
